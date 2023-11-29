@@ -26,7 +26,7 @@ VALUES
     (15, 'Auto Loan', 'Loan', 4.25, 0.00, 20000.00);
 
 
-
+#1. Extract data from the database, so we can see what we're working with.
 Select *
 from bank_products;
 
@@ -41,7 +41,5 @@ Write another query that uses AND to show the product names that have a "Savings
 SELECT product_name, interest_rate
 FROM bank_products
 WHERE product_type="Savings"
-
-
 AND interest_rate>=0.75
 AND monthly_fee=0;
