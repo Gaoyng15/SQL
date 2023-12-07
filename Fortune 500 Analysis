@@ -55,3 +55,18 @@ VALUES
     ('Company II', 'Telecommunications', 110.5, 2000, 1, 21, 12, 4.9),
     ('Company JJ', 'Manufacturing', 370.0, 3100, 1, 20, 12, 7.6),
     ('Company KK', 'Healthcare', 150.2, 3400, 0, 16, 8, 5.3);
+
+
+Select *
+From fortune_companies;
+
+Which 500 fortune company has the most employees? 
+Select company_name, employees, revenue
+from fortune_companies
+order by employees Desc;
+
+Select all the comanies that has an average of at least 7 days of PTO and maternity_leave.
+Select sum(paid_time_off_days) As PTO, sum(maternity_leave_weeks) as Maternity_leave, company_name
+from fortune_companies
+group by company_name;
+
